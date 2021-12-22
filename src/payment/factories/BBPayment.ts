@@ -8,7 +8,7 @@ import IPaymentFactor from "./IPaymentFactory";
 
 
 
-export default class InterPayment implements IPaymentFactor{
+export default class BBPayment implements IPaymentFactor{
     pointsPayment(): IPoints {
         return new BBPoints()
     }

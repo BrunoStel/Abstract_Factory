@@ -6,8 +6,6 @@ import NUPoints from "../points/NUPoints";
 ;
 import IPaymentFactor from "./IPaymentFactory";
 
-
-
 export default class NuPayment implements IPaymentFactor{
     pointsPayment(): IPoints {
         return new NUPoints()

@@ -18,10 +18,12 @@ export default class VisaCard implements ICreditCard{
 
         if(this.user.cpf.length != 11){
             console.log(`${this.user.name}, o cpf informado está incorreto`)
+            throw new Error('CPF inválido')
         }
 
-        if(this.user.numberCard.length != 16){
+        if(!this.user.numberCard || this.user.numberCard.length != 16){
             console.log(`${this.user.name}, o cartão de credito informado está incorreto`)
+            throw new Error('Cartão inválido')
         }
     }
 
